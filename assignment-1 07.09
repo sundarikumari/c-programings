@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int n, a=0, b=1, next;
+    scanf("%d",&n);
+    if(n==a || n==b)
+    {
+        printf("Yes");
+    }
+    else
+    {
+        next = a+b;
+        while(next<n)
+        {
+            a=b;
+            b=next;
+            next=a+b;
+        }
+        if(next==n)
+           printf("Yes");
+        else
+           printf("No");
+    }
+    return 0;
+}
+
+output:
+4
+No
