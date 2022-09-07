@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i,count,*a,sum=0;
+
+    scanf("%d", &count);
+    a = (int *)malloc(count * sizeof(int));
+
+    for (i = 0; i < count; i++)
+    {
+        scanf("%d", a + i);
+        sum += *(a + i);
+    }
+    printf("sum is %d \n", sum);
+    free(a);
+    return 0;
+}
+
+output:
+3
+1
+4
+6
+sum is 11 
